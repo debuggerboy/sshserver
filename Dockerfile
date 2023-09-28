@@ -4,7 +4,7 @@ COPY files/apt_conf_d_unattnd_upgrd_firefox /etc/apt/apt.conf.d/51unattended-upg
 RUN apt update && \
     apt install openssh-server sudo openvpn software-properties-common git vim -y && \
     add-apt-repository ppa:mozillateam/ppa && \
-    apt install firefox -y
+    apt install firefox lxterminal -y
 RUN useradd -rm -d /home/anish -s /bin/bash -g root -G sudo -u 1000 anish 
 RUN  echo 'anish:test' | chpasswd
 RUN service ssh start
