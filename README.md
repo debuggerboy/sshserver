@@ -1,8 +1,13 @@
 # SSHSERVER
 
-## A Basic SSH Server
-
 A very basic SSH server using ubuntu latest image
+
+## Supported Tags
+
+- `0.0.1` - only openssh-server and single user
+- `0.0.2` - openssh-server, openvpn and firefox with single user
+
+## Source
 
 source: `https://dev.to/s1ntaxe770r/how-to-setup-ssh-within-a-docker-container-i5i`
 
