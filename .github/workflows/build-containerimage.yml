@@ -24,7 +24,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: build
-        run: docker build . --file Dockerfile --tag ${{ vars.DOCKER_ORG }}/${{ vars.DOCKER_REG }}:${{ github.event.inputs.flutter_version }} --tag ${{ vars.DOCKER_ORG }}/${{ vars.DOCKER_REG }}:latest
+        run: docker build . --file Dockerfile --tag ${{ vars.DOCKER_ORG }}/${{ vars.DOCKER_REG }}:${{ github.event.inputs.image_version }} --tag ${{ vars.DOCKER_ORG }}/${{ vars.DOCKER_REG }}:latest
 
       - name: push
         run: docker image push --all-tags ${{ vars.DOCKER_ORG }}/${{ vars.DOCKER_REG }}
