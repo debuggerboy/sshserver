@@ -1,14 +1,10 @@
 FROM ubuntu:22.04
+COPY files/apt_pref_moz_firefox /etc/apt/preferences.d/mozilla-firefox
+COPY files/apt_conf_d_unattnd_upgrd_firefox /etc/apt/apt.conf.d/51unattended-upgrades-firefox
 RUN apt update && \
     apt install openssh-server sudo openvpn software-properties-common git vim -y && \
     add-apt-repository ppa:mozillateam/ppa && \
-    echo ' \
-Package: * \
-Pin: release o=LP-PPA-mozillateam \
-Pin-Priority: 1001 \
-' | tee /etc/apt/preferences.d/mozilla-firefox && \
-echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox && \
-apt install firefox -y
+    apt install firefox -y
 RUN useradd -rm -d /home/anish -s /bin/bash -g root -G sudo -u 1000 anish 
 RUN  echo 'anish:test' | chpasswd
 RUN service ssh start
