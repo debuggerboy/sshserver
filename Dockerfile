@@ -7,7 +7,7 @@ COPY files/apt_conf_d_unattnd_upgrd_firefox /etc/apt/apt.conf.d/51unattended-upg
 RUN apt update && \
     apt install openssh-server sudo openvpn software-properties-common git vim -y && \
     add-apt-repository ppa:mozillateam/ppa && \
-    apt install firefox lxterminal -y
+    apt install firefox lxterminal libcanberra-gtk-module libcanberra-gtk3-module -y
 RUN groupadd -g "${GID}" "${USER}" && \
     useradd -rm -d /home/"${USER}" -s /bin/bash -g root -G sudo -u "${UID}" -g "${GID}" --no-log-init "${USER}"
 RUN  echo "${USER}:test" | chpasswd
