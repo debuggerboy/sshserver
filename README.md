@@ -4,8 +4,14 @@ A very basic SSH server using ubuntu latest image
 
 ## Supported Tags
 
+### Ubuntu 22.04 LTS Builds
+
 - `0.0.1` - only openssh-server and single user
 - `0.0.2` - openssh-server, openvpn and firefox with single user
+
+### Ubuntu 24.04 LTS Builds
+
+- `ubu2404_0.0.1` - openssh-server, openvpn, firefox with single user
 
 ## Source
 
