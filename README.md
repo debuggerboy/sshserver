@@ -19,6 +19,7 @@ https://github.com/debuggerboy/sshserver/
 
 [![Build Containerimage](https://github.com/debuggerboy/sshserver/actions/workflows/build-containerimage.yml/badge.svg?branch=main)](https://github.com/debuggerboy/sshserver/actions/workflows/build-containerimage.yml)
 
+[![Build Ubuntu 24.04 LTS Containerimage](https://github.com/debuggerboy/sshserver/actions/workflows/build_ubu2404_container_image.yml/badge.svg)](https://github.com/debuggerboy/sshserver/actions/workflows/build_ubu2404_container_image.yml)
 
 #### References:
 
